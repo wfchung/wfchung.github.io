@@ -1,0 +1,565 @@
+body {
+  background-color: #353333;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #353333;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.heading {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  margin: 15px;
+  font-family: mirza, serif;
+}
+.heading .material-icons {
+  position: relative;
+  top: 5px;
+  font-size: 40px;
+}
+.top-nav {
+  width: 100%;
+  min-height: 40px;
+  height: fit-content;
+  background-color: black;
+  margin: 0;
+  color: white;
+}
+.top-nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.top-nav li {
+  padding: 5px 8px;
+  margin: 0;
+  text-align: right;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.top-nav li .separator {
+  border-right: 1px solid white;
+  height: 30px;
+}
+.top-nav li a {
+  text-decoration: underline;
+  color: white;
+}
+.quote {
+  color: white;
+  margin: 35px;
+  font-family: mirza, serif;
+  font-size: 24px;
+  text-align: center;
+}
+.form1 {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form1 form {
+  padding: 25px;
+  margin: 25px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #747474;
+}
+.form1 div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+.form1 label {
+  width: 70px;
+  color: white;
+  padding: 0;
+  margin: 5px 10px 5px 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form1 input[type="text"],
+input[type="password"] {
+  flex-grow: 1;
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 0;
+  padding: 5px;
+}
+.form1 form input:focus {
+  outline: none;
+}
+.form1 span {
+  color: white;
+  align-self: flex-end;
+  margin: 10px 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#login {
+  padding: 10px 15px;
+  background-color: #039adb;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+}
+#login:focus {
+  outline: 1px solid white;
+}
+.buttons {
+  padding: 0;
+  margin: 35px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn {
+  background-color: #747474;
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.btn:focus {
+  outline: 1px solid white;
+}
+
+.page2-nav {
+  display: none;
+}
+.page2 {
+  margin: 10px;
+  /* display: flex; */
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.add-btn button {
+  background-color: #a6a6a6;
+  border: none;
+  width: 32px;
+  height: 32px;
+  color: white;
+  font-size: 28px;
+  float: right;
+  margin: 10px 30px 10px 10px;
+  padding: 0;
+  cursor: pointer;
+}
+.add-btn button:focus {
+  outline: 1px solid white;
+}
+.add-btn .tooltip {
+  background-color: #00000055;
+  width: fit-content;
+  padding: 8px;
+  color: #ffffffcc;
+  float: right;
+  border-radius: 4px;
+  margin: 9px 0;
+  visibility: hidden;
+}
+.add-btn:hover .tooltip {
+  visibility: visible;
+}
+.entries {
+  width: 240px;
+  list-style-type: none;
+  flex-grow: 1;
+  overflow: auto;
+  height: 60vh;
+}
+.entries li {
+  width: 90%;
+  margin: 15px 0;
+}
+.entries li button {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: #c4c4c4;
+  padding: 5px 0;
+}
+.entries li button:focus {
+  outline: 1px solid white;
+}
+.form2 {
+  flex-grow: 1;
+  max-width: 1000px;
+  margin: 10px;
+}
+.form2 form {
+  margin: 15px;
+  display: grid;
+  grid-gap: 15px;
+  align-items: center;
+  grid-template-columns: 65px auto auto;
+}
+.form2 .spacer {
+  grid-column: 1 / -1;
+  height: 10px;
+}
+.form2 label {
+  color: white;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form2 form input[type="text"],
+input[type="password"],
+textarea {
+  grid-column: span 2;
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 0;
+  padding: 5px;
+}
+.form2 form input:focus {
+  outline: none;
+}
+.form2 form textarea:focus {
+  outline: none;
+}
+.form2 form span {
+  grid-column: 2 / 3;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form2 form .copy-btn {
+  grid-column: 3 / -1;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#copy-entry-pass {
+  padding: 10px 15px;
+  margin: 5px 0 0 5px;
+  background-color: #a6a6a6;
+  border: none;
+  border-radius: 0;
+  color: black;
+  cursor: poiner;
+}
+#copy-entry-pass:focus {
+  outline: 1px solid white;
+}
+#save {
+  grid-column: 3 / -1;
+  padding: 10px 15px;
+  background-color: #039adb;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+  justify-self: end;
+}
+#save:focus {
+  outline: 1px solid white;
+}
+#delete {
+  grid-column: 3 / -1;
+  padding: 10px 15px;
+  background-color: #ac0606;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+  justify-self: end;
+}
+#delete:focus {
+  outline: 1px solid white;
+}
+@media screen and (max-width: 800px) {
+  .form2 form {
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+  }
+  .form2 form span {
+    grid-column: 1 / 2;
+  }
+  .form2 form .copy-btn {
+    grid-column: 2 / -1;
+  }
+  #save {
+    grid-column: 2 / -1;
+  }
+  #delete {
+    grid-column: 2 / -1;
+  }
+}
+@media screen and (max-width: 680px) {
+  .entries {
+    height: 30vh;
+  }
+  .page2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form2 {
+    width: 100%;
+  }
+  .form2 form {
+    grid-template-columns: 65px auto auto;
+    grid-gap: 15px;
+  }
+  .form2 form span {
+    grid-column: 2 / 3;
+  }
+  .form2 form .copy-btn {
+    grid-column: 3 / -1;
+  }
+  #save {
+    grid-column: 3 / -1;
+  }
+  #delete {
+    grid-column: 3 / -1;
+  }
+}
+@media screen and (max-width: 420px) {
+  .form2 form {
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+  }
+  .form2 form span {
+    grid-column: 1 / 2;
+  }
+  .form2 form .copy-btn {
+    grid-column: 2 / -1;
+  }
+  #save {
+    grid-column: 2 / -1;
+  }
+  #delete {
+    grid-column: 2 / -1;
+  }
+}
+
+.form3 {
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form3 form {
+  padding: 25px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #747474;
+}
+.form3 div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+.form3 label {
+  width: 70px;
+  color: white;
+  padding: 0;
+  margin: 5px 10px 5px 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.form3 input[type="text"] {
+  flex-grow: 1;
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 0;
+  padding: 5px;
+}
+.form3 form input:focus {
+  outline: none;
+}
+.form3 span {
+  color: white;
+  align-self: flex-end;
+  margin: 10px 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#generate {
+  padding: 10px 15px;
+  background-color: #039adb;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+}
+#generate:focus {
+  outline: 1px solid white;
+}
+.recovery-keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.recovery-keys ul {
+  padding: 0;
+  overflow: auto;
+  list-style-type: none;
+}
+.btns {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btns span {
+  flex-grow: 1;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+#copy-tooltip {
+  visibility: hidden;
+  background-color: #00000055;
+  color: #ffffffcc;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 4px;
+  transform: opacity 0.3s;
+}
+#download-keys {
+  background-color: #6f6f6f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 14px 5px 3px 5px;
+  margin: 0 0 0 5px;
+}
+#copy-keys {
+  padding: 5px 5px 3px 5px;
+  margin: 15px 0 15px 5px;
+  background-color: #6f6f6f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.recovery-keys li {
+  background-color: #c4c4c4;
+  padding: 5px;
+  min-width: 620px;
+  width: fit-content;
+  margin: 5px;
+}
+.quote a {
+  color: white;
+}
+
+
+.form4 {
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form4 form {
+  flex-grow: 1;
+  max-width: 800px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #747474;
+}
+
+.form4 label {
+  color: white;
+  margin: 5px 0;
+  align-self: flex-start;
+}
+
+.form4 input[type="text"] {
+  background-color: #c4c4c4;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  border-radius: 0;
+  padding: 5px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.form4 input[type="text"]:focus {
+  outline: none;
+}
+
+#recover {
+  padding: 10px 15px;
+  background-color: #039adb;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+}
+#recover:focus {
+  outline: 1px solid white;
+}
+
+.recovered-pass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.recovered-pass label {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 8px;  
+}
+.recovered-pass div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+#password {
+  flex-grow: 1;
+  background-color: #c4c4c4;
+  padding: 5px;
+  margin: 0 10px;
+  outline: none;
+  min-width: 200px;
+}
+
+#copy-pass {
+  padding: 5px 5px 3px 5px;
+  margin: 10px 10px 10px 35px;
+  background-color: #6f6f6f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

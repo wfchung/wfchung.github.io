@@ -43,6 +43,10 @@ async function get_records() {
 }
 
 async function post_record(title, password, url, notes) {
+	alert('Before encryt:')
+	alert(title)
+	alert(password)
+
 	let post = {
 		title: CryptoJS.AES.encrypt(title, PASSWORD).toString(),
 		password: CryptoJS.AES.encrypt(password, PASSWORD).toString(),
@@ -50,6 +54,9 @@ async function post_record(title, password, url, notes) {
 		notes: CryptoJS.AES.encrypt(notes, PASSWORD).toString(),
 	};
 	try {
+		alert("After encrypt:")
+		alert(post["title"])
+		alert(post["password"])
 		let response = await axios.post(BASE_URL + USERNAME, post);
 		let id = response.data["id"];
 		records[id] = {
